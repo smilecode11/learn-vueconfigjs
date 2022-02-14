@@ -1,26 +1,42 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  Hello vue.config.js
+  <HelloWorldVue />
+  <span class="g-color">APP SPAN USE GLOBAL CLASS</span><br />
+  <span class="import-css">IMPORT STYLESS</span>
+  <FileSaver />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import { defineComponent } from "vue";
+import HelloWorldVue from "./components/HelloWorld.vue";
+import FileSaver from "./components/FileSaver.vue";
 
-export default {
-  name: 'App',
+export default defineComponent({
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    HelloWorldVue,
+    FileSaver
+  },
+  mounted() {
+    console.log("app console");
+  },
+});
 </script>
 
-<style>
+<style lang="scss" scoped>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  padding: 8px;
+}
+
+.import-css {
+  color: $danger;
+  background: $warn;
+  border: 1px solid $primary;
 }
 </style>
