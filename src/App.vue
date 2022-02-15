@@ -1,26 +1,28 @@
 <template>
   Hello vue.config.js
   <HelloWorldVue />
-  <span class="g-color">APP SPAN USE GLOBAL CLASS</span><br />
+  <span class="g-color">APP SPAN USE GLOBAL CLASS</span>
+  <br />
   <span class="import-css">IMPORT STYLESS</span>
+
   <FileSaver />
 </template>
 
 <script>
-import { defineComponent } from "vue";
-import HelloWorldVue from "./components/HelloWorld.vue";
-import FileSaver from "./components/FileSaver.vue";
+import { defineComponent } from 'vue'
+import HelloWorldVue from './components/HelloWorld.vue'
+import FileSaver from './components/FileSaver.vue'
 
 export default defineComponent({
-  name: "App",
+  name: 'App',
   components: {
     HelloWorldVue,
-    FileSaver
+    FileSaver,
   },
   mounted() {
-    console.log("app console");
+    console.log('app console')
   },
-});
+})
 </script>
 
 <style lang="scss" scoped>

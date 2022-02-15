@@ -1,4 +1,4 @@
-# 关于 vue.config.js 配置
+## 关于 vue.config.js 配置
 
 * publicPath
 > 打包目录: 默认 vue cli 会认为应用会被部署到根目录上(即 / )

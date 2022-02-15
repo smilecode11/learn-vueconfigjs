@@ -8,39 +8,39 @@
 </template>
 
 <script>
-import { defineComponent } from "vue";
-import FileSaver from "file-saver";
+import { defineComponent } from 'vue'
+import FileSaver from 'file-saver'
 export default defineComponent({
   setup() {
     const handleFileSave = (type) => {
       switch (type) {
-        case "image":
+        case 'image':
           FileSaver.saveAs(
-            "https://avatars.githubusercontent.com/u/70701174?s=40&v=4",
-            "image.jpg"
-          );
-          break;
-        case "text":
-          var blob = new Blob(["Hello, world!"], {
-            type: "text/plain;charset=utf-8",
-          });
-          FileSaver.saveAs(blob, "hello world.txt");
-          break;
-        case "canvas":
-          var canvas = document.getElementById("my-canvas");
+            'https://avatars.githubusercontent.com/u/70701174?s=40&v=4',
+            'image.jpg'
+          )
+          break
+        case 'text':
+          var blob = new Blob(['Hello, world!'], {
+            type: 'text/plain;charset=utf-8',
+          })
+          FileSaver.saveAs(blob, 'hello world.txt')
+          break
+        case 'canvas':
+          var canvas = document.getElementById('my-canvas')
           canvas.toBlob(function (blob) {
-            FileSaver.saveAs(blob, "pretty image.png");
-          });
-          break;
+            FileSaver.saveAs(blob, 'pretty image.png')
+          })
+          break
 
         default:
-          console.warn("other");
+          console.warn('other')
       }
-    };
+    }
 
     return {
       handleFileSave,
-    };
+    }
   },
-});
+})
 </script>

@@ -1,3 +1,5 @@
+const path = require('path')
+
 const NODE_ENV = process.env.NODE_ENV || 'development'
 //  默认代理设置
 const defaultDevServer = require('./config/proxyConfig')[NODE_ENV] || {}
@@ -53,6 +55,16 @@ module.exports = {
         } else {
             // 为开发环境修改配置
             console.log('开发环境配置')
+            // config.module.rules.push({
+            //     enforce: "pre",
+            //     test: /\.(js|vue)$/,
+            //     loader: "eslint-loader",
+            //     exclude: /(node_modules)/,
+            //     include: [path.join(__dirname, 'src')],
+            //     options: {
+            //         fix:true
+            //     }
+            // })
         }
     },
 
@@ -90,7 +102,7 @@ module.exports = {
     //#endregion 开发环境代理配合
 
     //#region 三方插件配置
-    pluginOptions: {}
+    // pluginOptions: {}
     //#endregion 三方插件配置
 
     //  在生成的 HTML 中的 <link rel="stylesheet"> 和 <script> 标签上启用 Subresource Integrity, 默认 false, 如果你构建后的文件是部署在 CDN 上的，启用该选项可以提供额外的安全性

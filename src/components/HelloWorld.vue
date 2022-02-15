@@ -12,18 +12,18 @@
 
 <script>
 export default {
-  name: "HelloWorld",
+  name: 'HelloWorld',
   props: {
     msg: {
       type: String,
-      default: "default message",
+      default: 'default message',
     },
   },
-};
+}
 </script>
 
 <style lang="scss" scoped>
-@import "~@/common/css/variable.scss";
+@import '~@/common/css/variable.scss';
 
 $primary: skyblue;
 
