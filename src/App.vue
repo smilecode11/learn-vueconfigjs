@@ -9,36 +9,34 @@
 </template>
 
 <script>
-import { defineComponent } from 'vue'
-import HelloWorldVue from './components/HelloWorld.vue'
-import FileSaver from './components/FileSaver.vue'
+import { defineComponent } from "vue";
+import HelloWorldVue from "./components/HelloWorld.vue";
+import FileSaver from "./components/FileSaver.vue";
 
 export default defineComponent({
-  name: 'App',
+  name: "App",
   components: {
     HelloWorldVue,
     FileSaver,
   },
   mounted() {
-    console.log('app console')
+    console.log("app console");
   },
-})
+});
 </script>
 
 <style lang="scss" scoped>
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
-
 #app {
-  padding: 8px;
+	padding: 8px;
 }
-
 .import-css {
-  color: $danger;
-  background: $warn;
-  border: 1px solid $primary;
+	border: 1px solid $primary;
+	background: $warn;
+	color: $danger;
 }
 </style>
